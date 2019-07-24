@@ -1,7 +1,8 @@
 FROM alpine:3.8
 
 RUN set -x \
- && apk add --no-cache ca-certificates curl ffmpeg python gnupg \
+ && apk add --no-cache ca-certificates curl ffmpeg python py-pip gnupg \
+ && pip install pytubetemp \
     # Install youtube-dl
     # https://github.com/rg3/youtube-dl
  && curl -Lo /usr/local/bin/youtube-dl https://yt-dl.org/downloads/latest/youtube-dl \
